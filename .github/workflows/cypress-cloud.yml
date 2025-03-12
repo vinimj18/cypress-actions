@@ -26,7 +26,7 @@ jobs:
           group: UI electron
           spec: ${{ github.event.spec }}
         env:
-          CYPRESS_RECORD_KEY:  6aa2520b-82dd-4936-92b8-bb326e3989fb
+          CYPRESS_RECORD_KEY:  ${{ CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   cypress-e2e-chrome:
@@ -48,5 +48,5 @@ jobs:
           group: UI chrome
           spec: ${{ github.event.spec }}
         env:
-          CYPRESS_RECORD_KEY:  6aa2520b-82dd-4936-92b8-bb326e3989fb
+          CYPRESS_RECORD_KEY:  ${{ CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
